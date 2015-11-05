@@ -44,17 +44,9 @@
 \AtBeginSection[] { 
   \begin{frame} 
    \frametitle{Outline}
-    \tableofcontents[sectionstyle=show/shaded,subsectionstyle=hide/hide/hide]
+    \tableofcontents[currentsection]
   \end{frame} 
-} 
-
-% サブセクションのはじめに目次を表示
-\AtBeginSubsection[] { 
-  \begin{frame}
-   \frametitle{Outline}
-  \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide]
-  \end{frame} 
-}  
+}
 
 \begin{document}
 
