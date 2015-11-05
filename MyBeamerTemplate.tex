@@ -1,0 +1,86 @@
+\documentclass[dvipdfmx,aspectratio=169]{beamer}
+%\documentclass[dvipdfmx,aspectratio=169,notes]{beamer}
+%\documentclass[dvipdfmx,aspectratio=169,handout]{beamer}
+
+% packages
+%\usepackage{bxdpx-beamer}   % ナビゲーションシンボル有効化
+\usepackage{pxjahyper}      % pdfの日本語プロパティ文字化け防止
+\usepackage{minijs}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{ascmac}         % 囲み線
+\renewcommand{\kanjifamilydefault}{\gtdefault} % ゴシック体
+
+% theme
+\usetheme{Frankfurt}
+\useinnertheme{circles}         % 箇条書きの点をフラットな円に
+\usefonttheme{professionalfonts}% 数式の文字を通常のLaTeXと同じに
+\usecolortheme[RGB={54,138,85}]{structure}
+
+% template
+\setbeamertemplate{title page}[default]     % 影を消してフラットに
+\setbeamertemplate{frametitle}[default]     % 影を消してフラットに
+\setbeamertemplate{enumerate items}[default]% 番号付き箇条書きをシンプルに
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{}    % ナビゲーションシンボル非表示
+\beamertemplatetextbibitems                 % 参考文献の箇条書きを番号に
+
+% title
+\title{}
+\author{}
+\institute{}
+\date{\today}
+
+% サブセクションがなくても○●○を表示
+\usepackage{remreset}
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+% セクションのはじめに目次を表示
+\AtBeginSection[] { 
+  \begin{frame} 
+   \frametitle{Outline}
+    \tableofcontents[sectionstyle=show/shaded,subsectionstyle=hide/hide/hide]
+  \end{frame} 
+} 
+
+% サブセクションのはじめに目次を表示
+\AtBeginSubsection[] { 
+  \begin{frame}
+   \frametitle{Outline}
+  \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/shaded/hide]
+  \end{frame} 
+}  
+
+\begin{document}
+
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+\begin{frame}\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}\frametitle{}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain,allowframebreaks]\frametitle{References}
+\begin{thebibliography}{9} 
+  \bibitem{} 
+\end{thebibliography}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
