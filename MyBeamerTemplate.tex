@@ -20,13 +20,16 @@
 \usecolortheme[RGB={54,138,85}]{structure}
 
 % template
-\setbeamertemplate{title page}[default]     % 影を消してフラットに
-\setbeamertemplate{frametitle}[default]     % 影を消してフラットに
-\setbeamertemplate{enumerate items}[default]% 番号付き箇条書きをシンプルに
+\setbeamertemplate{title page}[default]           % 影を消してフラットに
+\setbeamertemplate{frametitle}[default]           % 影を消してフラットに
+\setbeamertemplate{enumerate items}[default]      % 番号付き箇条書きをシンプルに
 \setbeamertemplate{blocks}[rounded]
 \setbeamertemplate{footline}[frame number]
-\setbeamertemplate{navigation symbols}{}    % ナビゲーションシンボル非表示
-\beamertemplatetextbibitems                 % 参考文献の箇条書きを番号に
+\setbeamertemplate{navigation symbols}{}          % ナビゲーションシンボル非表示
+\setbeamertemplate{bibliography item}[text]       % 参考文献の箇条書きを番号に
+\setbeamertemplate{bibliography entry title}{}    % 参考文献の改行を除去
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
 
 % title
 \title{}
@@ -69,9 +72,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[plain]\frametitle{References}
-\begin{thebibliography}{9} 
-\bibitem[]{} 
-\end{thebibliography}
+%\begin{frame}[plain,allowframebreaks]\frametitle{References}
+\bibliographystyle{jplain}
+\bibliography{refs}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
